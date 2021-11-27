@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/book_bgr"
+        android:padding="@dimen/_15sdp">
+        <ImageView
+            android:id="@+id/btnBackToHomeFragment"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_arrow_back_black_24dp">
+
+        </ImageView>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/bookstore_logo"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEdtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_username"
+                android:inputType="number"
+                app:counterEnabled="true">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutedtPassWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_below="@id/layoutEdtUserName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPasWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_password"
+                android:inputType="textPassword">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvForgetPassWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutedtPassWord"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/forget_pass">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvForgetPassWord"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@drawable/btn_login"
+            android:text="@string/sign_in"
+            android:textColor="@color/text_login">
+
+        </Button>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:id="@+id/newbie"
+                android:text="@string/newbie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:id="@+id/newAcc"
+                android:text="@string/sign_up"
+                android:layout_toRightOf="@id/newbie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
